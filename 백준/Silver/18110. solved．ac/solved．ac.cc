@@ -3,7 +3,7 @@ using namespace std;
 
 int n, num, ex, ret;
 vector<int> inputs;
-double sum;
+int sum;
 int main() {
     cin >> n;
     for(int i = 0; i < n; i++) {
@@ -13,11 +13,15 @@ int main() {
     sort(inputs.begin(), inputs.end());
     ex = round(n * 0.15);
     
-    for (int i = ex; i < n - ex; i++) {
-        sum += inputs[i];
+    
+    inputs.erase(inputs.begin(), inputs.begin() + ex);
+    inputs.erase(inputs.end() - ex, inputs.end());
+
+    for(int i : inputs) {
+        sum += i;
     }
 
-    ret = round(sum/(n - ex * 2));
+    ret = round(sum/(float)inputs.size());
     
     if(n == 0)
         ret = 0;
