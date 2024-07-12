@@ -55,3 +55,64 @@ int main() {
     cout << mode << '\n';
     cout << range;
 }
+
+
+// gpt-4o의 풀이 참고
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <map>
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> numbers(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> numbers[i];
+    }
+
+    // 1. 산술평균 (소수 첫째 자리에서 반올림)
+    double sum = 0;
+    for (int i = 0; i < n; ++i) {
+        sum += numbers[i];
+    }
+    int mean = round(sum / n);
+
+    // 2. 중앙값
+    sort(numbers.begin(), numbers.end());
+    int median = numbers[n / 2];
+
+    // 3. 최빈값
+    map<int, int> freq;
+    for (int i = 0; i < n; ++i) {
+        freq[numbers[i]]++;
+    }
+
+    vector<pair<int, int>> freq_vec(freq.begin(), freq.end());
+    sort(freq_vec.begin(), freq_vec.end(), [](pair<int, int> a, pair<int, int> b) {
+        if (a.second == b.second) return a.first < b.first;
+        return a.second > b.second;
+    });
+
+    int mode;
+    if (freq_vec.size() > 1 && freq_vec[0].second == freq_vec[1].second) {
+        mode = freq_vec[1].first;
+    } else {
+        mode = freq_vec[0].first;
+    }
+
+    // 4. 범위
+    int range = numbers.back() - numbers.front();
+
+    // 결과 출력
+    cout << mean << endl;
+    cout << median << endl;
+    cout << mode << endl;
+    cout << range << endl;
+
+    return 0;
+}
