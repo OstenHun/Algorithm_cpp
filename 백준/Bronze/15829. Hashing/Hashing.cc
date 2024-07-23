@@ -13,6 +13,8 @@ int main() {
     //     ret += ((str[i]-96) * pow(31, i));
     // }
 
+    // mod 연산 방법
+    // (A * B) % C = (A % C * B % C) % C
     for (int i = 0; i < str.size(); i++) {
         ret += ((str[i] - 96) * R) % M;
         ret %= M;
