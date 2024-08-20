@@ -1,3 +1,6 @@
+//bitset 이용하기, 비트 연산자 이용하는 거 더 연습하기.
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
