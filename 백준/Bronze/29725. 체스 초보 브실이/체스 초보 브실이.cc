@@ -41,3 +41,25 @@ int main() {
 
     cout << p1 - p2 << '\n';
 }
+
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    map<char, int> pieceValue = {
+        {'P', 1}, {'N', 3}, {'B', 3}, {'R', 5}, {'Q', 9},
+        {'p', -1}, {'n', -3}, {'b', -3}, {'r', -5}, {'q', -9}
+    };
+
+    int totalScore = 0;
+    for (int i = 0; i < 8; i++) {
+        string row;
+        cin >> row;
+        for (char piece : row) {
+            totalScore += pieceValue[piece];
+        }
+    }
+
+    cout << totalScore << '\n';
+}
