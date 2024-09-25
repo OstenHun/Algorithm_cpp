@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, num;
+int n, nm;
 int main() {
     cin >> n;
 
-    vector<int> cnt(10001, 0);
+    vector<int> cnt(10101, 0);
 
-    for(int i = 0; i < n; i++) {
-        cin >> num;
-        cnt[num]++;
+    for (int i = 0; i < n; i++) {
+        cin >> nm;
+        cnt[nm]++;
     }
 
     for (int i = 1; i <= 10000; i++) {
@@ -17,6 +17,4 @@ int main() {
             cout << i << '\n';
         }
     }
-
-    return 0;
 }
