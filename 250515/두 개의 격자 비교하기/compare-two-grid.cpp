@@ -22,12 +22,13 @@ int main() {
             cin >> nm;
             if (nm != ans[i][j])
                 cout << 1 << ' ';
-            else cout << 0 << ' ';
+            else 
+                cout << 0 << ' ';
         }
         cout << '\n';
     }
 
-    for (int j = 0; j < m; j++) {
+    for (int j = 0; j < n; j++) {
         delete[] ans[j];
     }
 
