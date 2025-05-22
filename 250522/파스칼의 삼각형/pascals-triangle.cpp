@@ -4,6 +4,12 @@ using namespace std;
 int n;
 int main() {
     cin >> n;
+
+    if (n==1) {
+        cout << 1;
+        return 0;
+    }
+    
     int** mat  = new int*[n];
     for (int i = 0; i < n; i++) {
         mat[i] = new int[i+1];
