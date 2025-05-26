@@ -16,7 +16,7 @@ int main() {
     char chk;
     cin >> chk;
     int cnt = 0;
-    double len = 0;
+    int len = 0;
     
     for (int i = 0; i < n; i++) {
         size_t pos = mat[i].find(chk);
@@ -27,6 +27,6 @@ int main() {
     }
     cout << cnt << ' ';
 
-    cout << fixed << setprecision(2) << len/cnt;
+    cout << fixed << setprecision(2) << (double) len/cnt;
     return 0;
 }
