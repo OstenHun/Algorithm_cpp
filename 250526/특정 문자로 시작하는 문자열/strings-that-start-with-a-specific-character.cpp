@@ -28,5 +28,7 @@ int main() {
     cout << cnt << ' ';
 
     cout << fixed << setprecision(2) << (double) len/cnt;
+
+    delete[] mat;
     return 0;
 }
