@@ -19,12 +19,13 @@ int main() {
     int len = 0;
     
     for (int i = 0; i < n; i++) {
-        size_t pos = mat[i].find(chk);
-        if (pos != string::npos) {
+        if (mat[i][0] == chk) {
             cnt++;
             len+=mat[i].length();
         }
     }
+
+    
     cout << cnt << ' ';
 
     cout << fixed << setprecision(2) << (double) len/cnt;
