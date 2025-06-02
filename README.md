@@ -5,9 +5,9 @@
 
 ## 📁 디렉토리 구조
 
-* CodeTree(https://github.com/OstenHun/Algorithm_cpp/tree/0d34273e9b18b82d6f89d04deebcb2c10f706598/CodeTree)
+* [CodeTree](https://github.com/OstenHun/Algorithm_cpp/tree/0d34273e9b18b82d6f89d04deebcb2c10f706598/CodeTree)
 
-* 백준(https://github.com/OstenHun/Algorithm_cpp/tree/0d34273e9b18b82d6f89d04deebcb2c10f706598/%EB%B0%B1%EC%A4%80)
+* [백준](https://github.com/OstenHun/Algorithm_cpp/tree/0d34273e9b18b82d6f89d04deebcb2c10f706598/%EB%B0%B1%EC%A4%80)
 
 각 디렉토리 내에는 문제 제목과 동일한 이름의 .cpp 파일과 그에 대한 풀이가 포함되어 있습니다.
 
@@ -21,7 +21,7 @@
 
 ## 📚 참고 자료
 문제 해결에 참고한 주요 알고리즘 학습 자료:
-* c++ reference (https://cppreference.com/)
-* CodeTree 개념
-* 모두의 c++ (https://modoocode.com/category/C++#google_vignette)
-* VisuAlgo (https://visualgo.net/en)
+* [c++ reference] (https://cppreference.com/)
+* [모두의 c++] (https://modoocode.com/category/C++#google_vignette)
+* [VisuAlgo] (https://visualgo.net/en)
+* [CodeTree 자료] (https://www.codetree.ai/ko/trail-info)
