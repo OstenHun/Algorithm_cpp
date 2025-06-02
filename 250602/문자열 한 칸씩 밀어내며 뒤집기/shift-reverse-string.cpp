@@ -1,3 +1,5 @@
+
+// 내 풀이.
 #include <iostream>
 #include <string>
 
@@ -30,6 +32,51 @@ int main() {
         }
 
         cout << input_str << '\n';
+    }
+
+    return 0;
+}
+
+// 해설 참고해서 작성한 풀이
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+string input_str;
+int str_size;
+
+int main() {
+    int q_num;
+    cin >> input_str >> q_num;
+
+    str_size = input_str.size();
+
+    int q_type;
+    for (int i = 0 ; i < q_num; i++) {
+        cin >> q_type;
+        if (q_type == 1) {
+            int len = (int) input_str.size();
+            input_str = input_str.substr(1, len - 1) + input_str.substr(0, 1);
+
+            cout << input_str << '\n';
+        }
+
+        else if (q_type == 2) {
+            int len = (int) input_str.size();
+
+            //String containing the substring [pos, pos + count) or [pos, size()).
+            input_str = input_str.substr(len-1, 1) + input_str.substr(0, len - 1);
+            // input_str = input_str.substr(len-1, len) + input_str.substr(0, len - 1);
+            
+            cout << input_str << '\n';
+        }
+
+        else if (q_type == 3) {
+            reverse(input_str.begin(), input_str.end());
+            
+            cout << input_str << '\n';
+        }
     }
 
     return 0;
