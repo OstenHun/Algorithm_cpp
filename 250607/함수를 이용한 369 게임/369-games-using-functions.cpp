@@ -69,6 +69,7 @@ int main() {
         *각 숫자마다 최대 log₁₀(n)번 연산 → 전체는 O((b−a+1) × log₁₀(max(b)))
 
 */
+
 #include <iostream>
 using namespace std;
 
