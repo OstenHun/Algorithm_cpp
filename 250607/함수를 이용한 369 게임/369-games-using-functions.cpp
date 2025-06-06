@@ -1,7 +1,10 @@
 /*
     to_string은 문자열 할당 비용이 높고 메모리 낭비 가능
 
-    시간 복잡도 : to_string + 반복문 → O((b−a+1) × (log₁₀(max(b))) + α)    
+    시간 복잡도 : 
+    
+        *to_string + 반복문 → O((b−a+1) × (log₁₀(max(b))) + α)    
+        
 */
 
 #include <iostream>
