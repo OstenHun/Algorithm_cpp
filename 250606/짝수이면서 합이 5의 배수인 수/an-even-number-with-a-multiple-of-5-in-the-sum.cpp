@@ -5,7 +5,7 @@ using namespace std;
 int n;
 
 bool Check(int x) {
-    return x%2==0 && x%5==0;
+    return x%2==0 && (x/10+x%10) == 0;
 }
 
 int main() {
