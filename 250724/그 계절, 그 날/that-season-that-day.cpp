@@ -4,16 +4,15 @@ using namespace std;
 
 int Y, M, D;
 
-bool IsLeafYear(int y) {
-    if (y % 4!=0) return false;
-    if (y % 100 != 0) return false;
-    if (y % 400 != 0) return false;
-
-    return true;
+bool IsLeapYear(int y) {
+    if (y % 4 != 0) return false;
+    if (y % 100 != 0) return true;
+    
+    return (y % 400 == 0);
 }
 
 bool IsDay(int y, int m, int d) {
-    if (IsLeafYear(y)) {
+    if (IsLeapYear(y)) {
         int dates[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         if (1 <= d && d <= dates[m-1]) return true;
