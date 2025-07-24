@@ -13,7 +13,7 @@ bool IsLeapYear(int y) {
 
 bool IsDay(int y, int m, int d) {
     if (IsLeapYear(y)) {
-        int dates[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int dates[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         if (1 <= d && d <= dates[m-1]) return true;
         
@@ -21,7 +21,7 @@ bool IsDay(int y, int m, int d) {
     }
 
     else {
-        int dates[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int dates[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         if (1 <= d && d <= dates[m-1]) return true;
 
