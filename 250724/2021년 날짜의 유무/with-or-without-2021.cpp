@@ -6,18 +6,18 @@ int M, D;
 
 bool IsIn(int m, int d) {
     if (m == 2) {
-        if (d < 0 || d > 28) return false;
+        if (0 <= d && d <= 28) return true;
     }
 
-    if (m==4 || m==6 || m==9 || m==11) {
-        if (d < 0 || d > 30) return false;
+    else if (m==4 || m==6 || m==9 || m==11) {
+        if (0 <= d && d <= 30) return true;
     }
 
-    else {
-        if (d < 0 || d > 31) return false;
+    else if (1 <= m && m <= 12) {
+        if (0 <= d && d <= 31) return true;
     }
 
-    return true;
+    return false;
 }
 
 int main() {
