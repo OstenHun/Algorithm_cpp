@@ -27,3 +27,30 @@ int main() {
 
     return 0;
 }
+
+// 해설
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int n;
+int arr[100];
+
+int MaxValue(int a) {
+    if (a==0)
+        return arr[0];
+
+    return max(MaxValue(a-1), arr[a]);
+}
+
+int main() {
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    cout << MaxValue(n - 1);
+
+    return 0;
+}
