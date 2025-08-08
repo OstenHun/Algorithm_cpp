@@ -17,7 +17,9 @@ class Position {
 };
 
 bool cmp(const Position &a, const Position &b) {
-    return a.x+a.y < b.x+b.y;
+    if(a.x+a.y!=b.x+b.y)
+        return a.x+a.y < b.x+b.y;
+    return a.num < b.num;
 }
 
 vector<Position> cor;
