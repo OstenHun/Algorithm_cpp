@@ -12,7 +12,7 @@ int main() {
     int hour = 11;
     int min = 11;
 
-    if (a == 11 && b<=11 && c<=11) {
+    if (a == 11 && b<=11 && c<11) {
         elapsed_min = -1;
     }
 
