@@ -35,7 +35,8 @@ int main() {
         people.emplace_back(name, h, w);
     }
     sort(people.begin(), people.end(), cmp_name);
-
+    cout << fixed;
+    cout.precision(1);
     cout << "name" << '\n';
     for (auto i: people) {
         cout << i.name << ' ' << i.height << ' ' << i.weight << '\n';
