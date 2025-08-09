@@ -21,12 +21,12 @@ int main() {
     int chk;
 
     int day2 = 0;
-    for (int i = 0; i < m1; i++) {
+    for (int i = 1; i < m1; i++) {
         day2 += month[i];
     }
+    day2 += d1;
 
-
-    while (dd != day - day2) {
+    while (dd <= day - day2) {
         chk = dd % 7;
         date[chk]++;
 
