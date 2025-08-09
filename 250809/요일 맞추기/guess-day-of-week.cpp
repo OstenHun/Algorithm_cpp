@@ -14,12 +14,12 @@ int main() {
     int day2 = 0;
     int day1 = 0;
     for (int i = 1; i < m2; i++) {
-        day2 += i*month[i];
+        day2 += month[i];
     }
     day2+=d2;
 
     for (int i = 1; i < m1; i++) {
-        day1 += i*month[i];
+        day1 += month[i];
     }
     day1+=d1;
     elapsed_day = day2 - day1;
