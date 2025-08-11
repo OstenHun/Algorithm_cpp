@@ -11,7 +11,7 @@ int main() {
     cin >> N >> B;
     int cnt = 0;
     while (1) {
-        if (N < 2) {
+        if (N < B) {
             digits[cnt++] = N;
             break;
         }
