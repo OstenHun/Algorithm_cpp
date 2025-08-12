@@ -24,7 +24,7 @@ int main() {
         }
 
         digits.push_back(num%b);
-        num /= 2;
+        num /= b;
     }
 
     for (int i = digits.size() - 1; i >= 0; i--) {
