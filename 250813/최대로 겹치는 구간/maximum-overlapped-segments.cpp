@@ -19,8 +19,8 @@ int main() {
     }
 
     for (int i = 0; i < n; i++) {
-        x1[i]+=nm;
-        x2[i]+=nm;
+        x1[i]+=-nm;
+        x2[i]+=-nm;
     }
 
     for (int i = 0; i < n; i++) {
