@@ -33,22 +33,23 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         if (dir[i] == 'R') {
-            for (int j = 0; j < x[i]; j++) {
-                ans[idx++]++;
+            for (int j = idx; j < idx + x[i]; j++) {
+                ans[j]++;
             }
+            idx+=x[i];
         }
+
         else if (dir[i] == 'L') {
-            for (int j = 0; j < x[i]; j++) {
-                ans[idx--]++;
+            for (int j = idx-1; j >= idx - x[i]; j--) {
+                ans[j]++;
             }
+            idx-=x[i];
         }
     }
 
     int cnt = 0;
 
-    for (auto i : ans) {
-        if (i >=2) cnt++;
-    }
+    for (auto i : ans) if (i >= 2) cnt++;
 
     cout << cnt; 
     return 0;
