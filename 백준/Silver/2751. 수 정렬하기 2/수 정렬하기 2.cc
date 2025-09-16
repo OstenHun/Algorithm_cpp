@@ -1,20 +1,24 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
-int n;
-vector<int> nms;
+vector<int> numbers;
+int n, num;
 int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
     cin >> n;
-    for (int i = 0; i < n; i++) {
-        int nm;
-        cin >> nm;
-        nms.push_back(nm);
-    }
-
-    sort(nms.begin(), nms.end());
 
     for (int i = 0; i < n; i++) {
-        if (i < n-1 && nms[i]==nms[i+1]) continue;
-        else cout << nms[i] << '\n';
+        cin >> num;
+        numbers.push_back(num);
     }
+
+    sort(numbers.begin(), numbers.end());
+
+    for (const auto& i : numbers) cout << i << '\n';
+    
+    return 0;
 }
