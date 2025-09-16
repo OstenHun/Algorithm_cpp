@@ -1,17 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, num;
-vector<int> inputs;
+int n;
+vector<int> nms;
 int main() {
     cin >> n;
     for (int i = 0; i < n; i++) {
-        cin >> num;
-        inputs.push_back(num);
+        int nm;
+        cin >> nm;
+        nms.push_back(nm);
     }
-    sort(inputs.begin(), inputs.end());
-    
-    for(int i : inputs) {
-        cout << i << '\n';
-    }
+    sort(nms.begin(), nms.end());
+
+    for (int i : nms) cout << i << '\n';
 }
