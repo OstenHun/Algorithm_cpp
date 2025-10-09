@@ -11,16 +11,17 @@ int main() {
         cin >> arr[i];
     }
 
-    int cnt = 1;
-    int mx = 0;
+    int cnt = 0;
+    int mx = 1;
     for (int i = 0; i < N; i++) {
-        if (i==0 || arr[i] != arr[i-1]) {
-            if (cnt > mx) mx = cnt;
+        if (i == 0 || arr[i] != arr[i-1]) {
             cnt = 1;
         } 
-        else {
+        else if (arr[i] == arr[i-1]) {
             cnt++;
         }
+
+        if (cnt > mx) mx = cnt;
     }  
 
     cout << mx << '\n';
