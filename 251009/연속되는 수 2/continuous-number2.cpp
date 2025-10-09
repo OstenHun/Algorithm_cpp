@@ -22,7 +22,7 @@ int main() {
             cnt++;
         }
     }  
-    if (mx == 1) mx = 0;
+
     cout << mx << '\n';
 
     return 0;
