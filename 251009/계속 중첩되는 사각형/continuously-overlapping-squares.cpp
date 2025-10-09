@@ -21,14 +21,13 @@ int main() {
         if (i%2==0) {
             for (int y = y1[i]; y < y2[i]; y++) {
                 for (int x = x1[i]; x < x2[i]; x++) {  
-                    if (board[y][x]>=1)
-                        board[y][x]--;
+                    board[y][x] = 2;
                 }
             }
         } else {
             for (int y = y1[i]; y < y2[i]; y++) {
                 for (int x = x1[i]; x < x2[i]; x++) {
-                    board[y][x]++;
+                    board[y][x] = 1;
                 }
             }
         }
@@ -38,7 +37,7 @@ int main() {
 
     for (int y = 0; y < MAXC; y++) {
         for (int x = 0; x < MAXC; x++) {
-            if (board[y][x] >= 1) area++;
+            if (board[y][x] == 1) area++;
         }
     }
 
