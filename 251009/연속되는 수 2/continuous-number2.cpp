@@ -11,7 +11,7 @@ int main() {
         cin >> arr[i];
     }
 
-    int cnt = 0;
+    int cnt = 1;
     int mx = 0;
     for (int i = 0; i < N; i++) {
         if (i==0 || arr[i] != arr[i-1]) {
@@ -21,8 +21,8 @@ int main() {
         else {
             cnt++;
         }
-    }
-
+    }  
+    if (mx == 1) mx = 0;
     cout << mx << '\n';
 
     return 0;
