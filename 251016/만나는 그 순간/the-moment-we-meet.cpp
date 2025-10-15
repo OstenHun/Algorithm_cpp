@@ -56,11 +56,13 @@ int main() {
         }    
     }
 
-    for (int i = 1; i < 1000000; i++) {
+    int boundary = min(idx_a, idx_b);
+    for (int i = 1; i < boundary; i++) {
         if (trace_A[i]==trace_B[i]) {
             cout << i << '\n';
             break;
         }
+        else if (i==boundary-1) cout << -1;
     }
 
     return 0;
