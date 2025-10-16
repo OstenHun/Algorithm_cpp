@@ -41,11 +41,15 @@ int main() {
     }
 
     int cnt = 0;
+    int head = 0;
     for (int i = 1; i < ti; i++) {
-        if (ans[i]!=0 && ans[i]!=ans[i-1]) cnt++;
+        if (ans[i]!=0) {
+            if (head!=ans[i]) cnt++;
+            head = ans[i];
+        }
     }
 
-    cout << cnt << '\n';
+    cout << cnt-1 << '\n';
 
     return 0;
 }
