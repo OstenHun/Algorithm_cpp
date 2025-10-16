@@ -42,7 +42,7 @@ int main() {
 
     int cnt = 0;
     int head = 0;
-    for (int i = 1; i < ti; i++) {
+    for (int i = 0; i < ti; i++) {
         if (ans[i]!=0) {
             if (head!=ans[i]) cnt++;
             head = ans[i];
