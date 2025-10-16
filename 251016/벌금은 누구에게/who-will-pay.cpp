@@ -11,19 +11,20 @@ int main() {
     cin >> n >> m >> k;
     vector<int> x(n);
 
-    bool chk = false;
+    // bool chk = false;
+    int ans = -1;
     for (int i = 0; i < m; i++) {
         cin >> student;
         x[student-1]++;
         if (x[student-1]>=k) {
-            chk = true;
-            cout << student << '\n';
+            ans = student;
+            // cout << student << '\n';
             break;
         }
         
     } 
 
-    if (!chk) cout << -1 << '\n';
+    cout << ans << '\n';
 
     return 0;
 }
