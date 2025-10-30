@@ -26,7 +26,7 @@ int main() {
         y[tt - 1] = yy;
     }
 
-    for (int i = 0; i < MAXN-1; i++) {
+    for (int i = 0; i < MAXN; i++) {
         int curr_x = x[i]-1;
         int curr_y = y[i]-1;
         if (cnt[curr_x] > 0 && cnt[curr_y] > 0) {
