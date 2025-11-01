@@ -2,8 +2,6 @@
 #include <vector>
 using namespace std;
 
-const int MAXN = 1000000;
-
 int N, M;
 int s, s2;
 int v[1000], t[1000];
@@ -28,7 +26,7 @@ int main() {
     for (int i = 0; i < M; i++) {
         cin >> v2[i] >> t2[i];
         for (int j = 0; j < t2[i]; j++) {
-            s2+=v[i];
+            s2+=v2[i];
             dis2.push_back(s2);
         }
     }  
@@ -43,13 +41,9 @@ int main() {
         }
     }
 
-    int cnt = 0;
-    for (int i = 0; i < time; i++) {
-        if (i==0) {
-            if (ans[i]!=3) cnt++;
-        } else {
-            if (ans[i-1]!=ans[i]) cnt++;
-        }
+    int cnt = 1;
+    for (int i = 1; i < time; i++) {
+        if (ans[i-1]!=ans[i]) cnt++;
     }
 
     cout << cnt;
