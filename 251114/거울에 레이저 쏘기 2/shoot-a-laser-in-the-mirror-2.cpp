@@ -66,12 +66,12 @@ int main() {
 
     int x = 0, y = 0;
     for (int i = 1; i < k; i++) {
-        int chk = (i - 1) / 4;
+        int chk = (i - 1) / n;
         int dx[4] = { 0, 1, 0, -1 }, dy[4] = { 1, 0, -1, 0 };
         x += dx[chk], y += dy[chk];
     }
 
-    int dir = (k - 1) / 4;
+    int dir = (k - 1) / n;
 
     while (InRange(x, y)) {
         Move(&x, &y, &dir);
