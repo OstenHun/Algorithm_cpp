@@ -66,7 +66,8 @@ int main() {
 
     int x = 0, y = 0;
     for (int i = 1; i < k; i++) {
-        int chk = (i - 1) / n;
+        if (i % n == 0) continue;
+        int chk = i / n;
         int dx[4] = { 0, 1, 0, -1 }, dy[4] = { 1, 0, -1, 0 };
         x += dx[chk], y += dy[chk];
     }
