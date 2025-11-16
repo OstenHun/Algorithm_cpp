@@ -18,7 +18,8 @@ int main() {
 
     int x = 0, y = 0;
     mat[x][y] = 'A';
-    for (int i = 66; i < 65 + n*m; i++) {
+    for (int i = 1; i < n*m; i++) {
+        if (i > 26) i%=26;
         int nx = x + dx[d], ny = y + dy[d];
         
         if (!InRange(nx, ny) || (int) mat[nx][ny] > 0) {
@@ -26,7 +27,7 @@ int main() {
             nx = x + dx[d], ny = y + dy[d];
         }
         x = nx, y = ny;
-        mat[x][y] = (char)i;
+        mat[x][y] = (char)i+65;
     }
 
     for (int i = 0; i < n; i++) {
