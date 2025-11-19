@@ -17,6 +17,7 @@
 ## 🛠️ 사용 기술
 * 언어 : c++17
 * 개발 환경 : Visual Studio Code, 사이트 내 에디터
+* 디버깅 : Visual Studio
 
 <br><br>
 
