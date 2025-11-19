@@ -7,7 +7,7 @@
 
 * [CodeTree](https://github.com/OstenHun/Algorithm_cpp/tree/0d34273e9b18b82d6f89d04deebcb2c10f706598/CodeTree)
 
-* [백준]()
+* [백준](https://github.com/OstenHun/Algorithm_cpp/tree/main/%EB%B0%B1%EC%A4%80)
 
 각 디렉토리 내에는 문제 제목과 동일한 이름의 .cpp 파일과 그에 대한 풀이가 포함되어 있습니다.
 
