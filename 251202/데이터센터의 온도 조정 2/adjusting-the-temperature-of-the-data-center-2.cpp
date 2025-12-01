@@ -14,15 +14,13 @@ int main() {
         cin >> ta[i] >> tb[i];
     }
 
-    int mn = 1000;
     int mx = 0;
     for (int i = 0; i < n; i++) {
-        if (ta[i] < mn) mn = ta[i];
         if (mx < tb[i]) mx = tb[i];
     }
 
     int ans = 0;
-    for (int i = mn; i <= mx; i++) {
+    for (int i = 0; i <= mx; i++) {
         int sum = 0;
         for (int j = 0; j < n; j++) {
             if (i < ta[j]) sum+=c;
