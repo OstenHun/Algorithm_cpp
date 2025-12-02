@@ -17,12 +17,12 @@ int main() {
         cin >> x[i] >> y[i];
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i < n-1; i++) {
         int dist = 0;
-        int current_x = 0, current_y = 0;
+        int current_x = x[0], current_y = y[0];
         for (int j = 0; j < n; j++) {
             if (j==i) continue;
-            dist += abs(current_x - x[j]) + abs(current_y + y[j]);
+            dist += abs(current_x - x[j]) + abs(current_y - y[j]);
             current_x = x[j];
             current_y = y[j];
         }
