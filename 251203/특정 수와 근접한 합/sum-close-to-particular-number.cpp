@@ -26,6 +26,7 @@ int main() {
         for (int j = i+1; j < n; j++) {
             sum-=num[j];
             if (ans > abs(sum-s)) ans = abs(sum-s);
+            sum+=num[j];
         }
         sum+=num[i];
     }
