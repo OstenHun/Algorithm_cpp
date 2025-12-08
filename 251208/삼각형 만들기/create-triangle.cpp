@@ -6,6 +6,7 @@ using namespace std;
 int n;
 int x[100], y[100];
 int area;
+int ans;
 
 int GetMaxArea(int i1, int i2, int i3) {
     if (x[i1] == x[i2]) {
@@ -26,7 +27,7 @@ int GetMaxArea(int i1, int i2, int i3) {
         } else if (y[i3] == y[i1]) {
             area = abs(y[i2]-y[i3]) * abs(x[i3]-x[i1]);
         } 
-    }
+    } 
 
     return area;
 }
@@ -44,12 +45,12 @@ int main() {
     for (int i = 0; i < n; i++) {
         for (int j = i+1; j < n; j++) {
             for (int k = j+1; k < n; k++) {
-                area = GetMaxArea(i, j, k);
+                ans = max(GetMaxArea(i, j, k), ans);
             }
         }
     }
 
-    cout << area;
+    cout << ans;
 
     return 0;
 }
