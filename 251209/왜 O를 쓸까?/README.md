@@ -1,4 +1,4 @@
-# [왜 O를 쓸까?](https://www.codetree.ai/trails/complete/curated-cards/challenge-reason-why-use-bigo)
+# [왜 O를 쓸까](https://www.codetree.ai/trails/complete/curated-cards/challenge-reason-why-use-bigo)
 
 |유형|문제 경험치|난이도|
 |---|---|---|
