@@ -1,15 +1,19 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-void selection_sort(int* arr, int size) {
-    for (int i = 0; i < size - 1; i++) {
+void selection_sort(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
         int min_num = arr[i];
-        for (int j = i; j < size - 1; j++) {
-            if (arr[j] < arr[i]) {
-                swap(arr[i], arr[j]);
+        int idx = i;
+        for (int j = i; j < size; j++) {
+            if (arr[j] < min_num) {
+                min_num = arr[j];
+                idx = j;
             }
         }
+        swap(arr[i], arr[idx]);
     }
 }
 
